@@ -27,7 +27,7 @@ class Queue
         @internal_arr = []
     end
 
-    def endqueue(el)
+    def enqueue(el)
         @internal_arr.push(el)
         el
     end
