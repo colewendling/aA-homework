@@ -1,8 +1,8 @@
 # PHASE 2
 
-# def convert_to_int(str)
-#   Integer(str)
-# end
+def convert_to_int(str)
+   Integer(str)
+end
 
 # PHASE 3
 
