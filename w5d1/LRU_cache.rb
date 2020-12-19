@@ -9,11 +9,11 @@ class LRUCache
   end
 
   def add(el)
-    if @cache.include?(el)          
+    if @cache.include?(el)
       @cache.delete(el)
       @cache << el
-    elsif count >= @size                # if cache has reached cache_size LRU
-      @cache.shift                      # removes first LRU el and adds new el to cache
+    elsif count >= @size
+      @cache.shift
       @cache << el
     else
       @cache << el
