@@ -1,8 +1,8 @@
 require 'sqlite3'
-require 'singleton'
+require 'singleton' # insures only one instance of class created
 
 class PlayDBConnection < SQLite3::Database
-  include Singleton
+  include Singleton # calling functionality from ruby
 
   def initialize
     super('plays.db')
@@ -20,7 +20,7 @@ class Play
   end
 
   def self.find_by_title(title)
-    play = PlayDBConnection.instance.execute(<<-SQL, title)
+    play = PlayDBConnection.instance.execute(<<-SQL, title) -- See lecture slides - Heredocs
       SELECT
         *
       FROM
