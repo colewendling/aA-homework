@@ -1,5 +1,5 @@
 class Person < ApplicationRecord
-  validates :name, :house, presence: true
+  validates :name, :house, presence: true  #Review validations slide --> Cohort-Resources
 
   
   belongs_to :house,
